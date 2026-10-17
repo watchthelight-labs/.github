@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: OpenCore Install Guide
+    url: https://dortania.github.io/OpenCore-Install-Guide/
+    about: General OpenCore and Hackintosh setup questions are best answered there.
