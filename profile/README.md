@@ -9,7 +9,7 @@ macOS drivers and fixes for hardware Apple never shipped drivers for, written wh
 | Repo | What | State |
 |---|---|---|
 | [LegionCbmrFix](https://github.com/watchthelight-labs/LegionCbmrFix) | UEFI driver: fixes `vm_page_validate_no_references` panics caused by Lenovo's firmware loading Microsoft's cbmr_driver.efi | 1.0.0 |
-| [MtkWlan](https://github.com/watchthelight-labs/MtkWlan) | kext for the MediaTek MT7925 Wi-Fi card (`14C3:7925`) | 0.6.0 public, 0.9.0 (scan, join, WPA2) in testing |
+| [MtkWlan](https://github.com/watchthelight-labs/MtkWlan) | kext for the MediaTek MT7925 Wi-Fi card (`14C3:7925`) | 0.9.0: scan, join, WPA2-PSK (host-tested), `mtkwifi` tool, 190/175 Mb/s |
 | MtkBt | firmware loader for the MT7925's Bluetooth (USB `0489:E111`) | coming |
 | LegionBtFix | Lilu plugin: bluetoothd patches for the MT7925 on macOS 26.7.1 (crash loop on LE connect, silent AirPods) | coming, in testing |
 | Legion-5-15IAX10-OpenCore | EFI, config.plist and install notes for this laptop | coming |
