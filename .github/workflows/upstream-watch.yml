@@ -1,5 +1,5 @@
 # <wtl> project: watchthelight-labs | file: .github/workflows/upstream-watch.yml | author: watchthelight </wtl>
-# Every 10 minutes: post new upstream PRs, comments and reviews on watchthelight's PRs, closes and merges, and @mentions to Discord.
+# Every 10 minutes: post watchthelight's upstream PRs opened, comments and reviews on them, closes and merges, and @mentions to Discord.
 name: upstream-watch
 on:
   schedule:

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # <wtl> project: watchthelight-labs | file: tools/upstream_watch.py | author: watchthelight </wtl>
-"""Posts upstream activity to Discord for each repo of WATCH_REPOS: every PR opened, comments and reviews on
-watchthelight's PRs, his PRs being closed or merged, and @mentions. Run by .github/workflows/upstream-watch.yml every 10 minutes;
+"""Posts upstream activity to Discord for each repo of WATCH_REPOS: watchthelight's PRs opened, comments and reviews
+on his PRs, his PRs being closed or merged, and @mentions. Run by .github/workflows/upstream-watch.yml every 10 minutes;
 SINCE (ISO time) is the start of the previous successful run, so nothing is posted twice or skipped."""
 import json, os, sys, urllib.request, urllib.parse
 
@@ -78,11 +78,9 @@ for repo in REPOS:
             merged = bool(full.get("merged_at"))
             post(f"{repo} #{n} {'MERGED' if merged else 'closed'}: {pr['title']}", pr["html_url"],
                  f"by {(full.get('merged_by') or {}).get('login', '?') if merged else 'the maintainer'}", 0x2ECC71 if merged else 0xE74C3C, ME)
-    # every PR opened in the repo, by anyone
-    for it in gh("/search/issues", {"q": f"repo:{repo} is:pr created:>={SINCE[:19]}Z", "per_page": 100}):
-        mine = it["user"]["login"] == ME
-        post(f"{repo} #{it['number']}: PR opened by {it['user']['login']}: {it['title']}", it["html_url"], it.get("body"),
-             0x1ABC9C if not mine else 0x2ECC71, it["user"]["login"])
+    # PRs he opened
+    for it in gh("/search/issues", {"q": f"repo:{repo} is:pr author:{ME} created:>={SINCE[:19]}Z", "per_page": 100}):
+        post(f"{repo} #{it['number']}: your PR opened: {it['title']}", it["html_url"], it.get("body"), 0x2ECC71, ME)
     # mentions in new issue / PR bodies
     for it in gh("/search/issues", {"q": f"repo:{repo} mentions:{ME} created:>={SINCE[:19]}Z", "per_page": 100}):
         if it["user"]["login"] != ME and mentioned(it.get("body")):
