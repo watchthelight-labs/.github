@@ -1,0 +1,43 @@
+# <wtl> project: watchthelight-labs | file: .github/workflows/upstream-watch.yml | author: watchthelight </wtl>
+# Every 10 minutes: post new upstream PRs, comments and reviews on watchthelight's PRs, closes and merges, and @mentions to Discord.
+name: upstream-watch
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+    inputs:
+      hours:
+        description: "look back this many hours instead of to the last run"
+        default: ""
+      test:
+        description: "also post a 'running' message"
+        type: boolean
+        default: false
+permissions:
+  contents: read
+  actions: read
+concurrency: upstream-watch
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: since the last successful run
+        id: since
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HOURS: ${{ inputs.hours }}
+        run: |
+          if [ -n "$HOURS" ]; then s=$(date -u -d "-$HOURS hours" +%Y-%m-%dT%H:%M:%SZ)
+          else s=$(gh run list -R "$GITHUB_REPOSITORY" -w upstream-watch -s success -L 1 --json createdAt --jq '.[0].createdAt // empty')
+               [ -n "$s" ] || s=$(date -u -d '-1 hour' +%Y-%m-%dT%H:%M:%SZ); fi
+          echo "since=$s" >> "$GITHUB_OUTPUT"; echo "since $s"
+      - name: post to Discord
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          SINCE: ${{ steps.since.outputs.since }}
+          WATCH_REPOS: nullmoth/nvidia-macos-driver nullmoth/1401
+          TEST: ${{ inputs.test && '1' || '0' }}
+        run: python3 tools/upstream_watch.py
