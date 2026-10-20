@@ -8,7 +8,7 @@ macOS drivers and fixes for hardware Apple never shipped drivers for, written wh
 
 | Repo | What | State |
 |---|---|---|
-| [NvGfx](https://github.com/watchthelight-labs/NvGfx) | fork of NullMoth's NVIDIA Metal driver for the RTX 5070 Laptop: 165 Hz present path, 115 W TGP mode, shader cache fix, `nvgfx-smi`, reproducible kext builds (PolyForm Noncommercial) | 2.4.1-nvgfx.1 in daily use; 2.4.1-nvgfx.2 (boot hold fix) built, boot pending |
+| [NvGfx](https://github.com/watchthelight-labs/NvGfx) | fork of NullMoth's NVIDIA Metal driver for the RTX 5070 Laptop: 165 Hz present path, 115 W TGP mode, shader cache fix, `nvgfx-smi`, reproducible kext builds (PolyForm Noncommercial) | 2.4.3-nvgfx.1 (NullMoth 2.4.3 base, boot hold fix), daily use |
 | [LegionCpuPower](https://github.com/watchthelight-labs/LegionCpuPower) | Lilu plugin: real clocks and power limits for Arrow Lake-HX on Tahoe (MCHBAR limit from MSR 0x610, per-core HWP), fan control and the LegionFan menu app | 0.3.3, daily use |
 | [mt7925-hackintosh-wifi](https://github.com/watchthelight-labs/mt7925-hackintosh-wifi) | kext for the MediaTek MT7925 Wi-Fi card (`14C3:7925`): core driver, `mtkwifi` tool | 0.11.3, daily use |
 | [mt7925-hackintosh-wifi-native](https://github.com/watchthelight-labs/mt7925-hackintosh-wifi-native) | native IO80211 front end for the MT7925: the Wi-Fi menu, scanning, saved networks and auto-join | 0.4.11, daily use |
