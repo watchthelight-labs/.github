@@ -9,6 +9,7 @@ macOS drivers and fixes for hardware Apple never shipped drivers for, written wh
 | Repo | What | State |
 |---|---|---|
 | [NvGfx](https://github.com/watchthelight-labs/NvGfx) | fork of NullMoth's NVIDIA Metal driver for the RTX 5070 Laptop: 165 Hz present path, 115 W TGP mode, shader cache fix, `nvgfx-smi`, reproducible kext builds (PolyForm Noncommercial) | 2.4.3-nvgfx.1 (NullMoth 2.4.3 base, boot hold fix), daily use |
+| [XeGfx](https://github.com/watchthelight-labs/XeGfx) | Intel Xe graphics for macOS: Linux i915 through FreeBSD drm-kmod and LinuxKPI on XNU, with Mesa ANV under the NvGfx Metal plugin (NvGfx branch `xe`); collaborators and testers welcome | 0.0.2, builds, first hardware test queued |
 | [LegionCpuPower](https://github.com/watchthelight-labs/LegionCpuPower) | Lilu plugin: real clocks and power limits for Arrow Lake-HX on Tahoe (MCHBAR limit from MSR 0x610, per-core HWP), fan control and the LegionFan menu app | 0.3.3, daily use |
 | [mt7925-hackintosh-wifi](https://github.com/watchthelight-labs/mt7925-hackintosh-wifi) | Wi-Fi driver for the MediaTek MT7925 / Filogic 360 / AMD RZ717 (`14C3:7925`, `14C3:0717`), the only one for this chip; 190 Mb/s; the bundle zip on its releases page holds the whole Wi-Fi set | 0.11.3, daily use |
 | [mt7925-hackintosh-wifi-native](https://github.com/watchthelight-labs/mt7925-hackintosh-wifi-native) | macOS's own Wi-Fi menu on top of the driver (IO80211 and Skywalk): menu bar, System Settings, saved networks, auto-join, no client app, unlike the SimpleMtkWlan route | 0.4.11, daily use on Tahoe 26.7.1 |
@@ -24,7 +25,7 @@ macOS drivers and fixes for hardware Apple never shipped drivers for, written wh
 | [bootdump](https://github.com/watchthelight-labs/bootdump) | LaunchDaemon that snapshots the kernel log and the IORegistry at 20, 60, 180 and 300 s after boot, readable later from another OS | 0.1.0, in use |
 | [legion-reboot](https://github.com/watchthelight-labs/legion-reboot) | lets an AI coding agent restart the Mac it runs on for a staged boot attempt, and tells the next session what happened | 0.1.1, in use |
 | [hackintosh-feature-test](https://github.com/watchthelight-labs/hackintosh-feature-test) | 119 probes over graphics, display, video, audio, input, network, Bluetooth, services and power, with evidence files and a diff between passes | 0.1.0 |
-| [kcabi](https://github.com/watchthelight-labs/kcabi) | read-only Python tools for the x86_64 kernel collections: which symbols a kext may link against, ABI dumps, link checks | 0.1.0 |
+| [kcabi](https://github.com/watchthelight-labs/kcabi) | read-only Python tools for the x86_64 kernel collections: which symbols a kext may link against, ABI dumps (now also the graphics families), link checks | 0.1.0 |
 | [numpad-arrows](https://github.com/watchthelight-labs/numpad-arrows) | event tap that turns numpad 1, 5, 2 and 3 into the arrow keys, for a keyboard whose arrows died | 0.1.0, daily use |
 
 Each repo has a `docs/HOW-IT-WORKS.md` that explains the approach, and a Status table with what was actually tested. If it isn't in the table, assume it's untested.
