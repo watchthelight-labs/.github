@@ -15,9 +15,6 @@ SITE_JSON = "https://raw.githubusercontent.com/watchthelight-labs/watchthelight-
 REPOS_JSON = "https://labs.watchthelight.org/repos.json"
 ORG = "watchthelight-labs"
 B = "style=flat-square&labelColor=0d0e12"
-DISCLOSURE = ("> **Heads up:** a good portion of the code in these repos is AI generated. I do understand how it works,\n"
-              "> and I'm happy to explain any of it. If something looks wrong or you have a question, open an issue\n"
-              "> or ping me on Discord (`watchthelight`).")
 
 
 def get(url):
@@ -56,8 +53,6 @@ def main():
         "(https://labs.watchthelight.org) "
         f"[![discord](https://img.shields.io/badge/discord-watchthelight-2a2d33?{B}&logo=discord&logoColor=c8ccd0)]"
         "(https://discord.com/users/697169405422862417)",
-        "",
-        DISCLOSURE,
         "",
         site["intro"],
         "",

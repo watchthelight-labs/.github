@@ -2,10 +2,6 @@
 
 [![site](https://img.shields.io/badge/labs.watchthelight.org-6a9a6e?style=flat-square&labelColor=0d0e12&logo=githubpages&logoColor=c8ccd0)](https://labs.watchthelight.org) [![repos](https://img.shields.io/badge/repos-21-2a2d33?style=flat-square&labelColor=0d0e12)](https://github.com/orgs/watchthelight-labs/repositories) [![macOS](https://img.shields.io/badge/macOS_Tahoe-26.7.1-2a2d33?style=flat-square&labelColor=0d0e12&logo=apple&logoColor=c8ccd0)](https://labs.watchthelight.org) [![discord](https://img.shields.io/badge/discord-watchthelight-2a2d33?style=flat-square&labelColor=0d0e12&logo=discord&logoColor=c8ccd0)](https://discord.com/users/697169405422862417)
 
-> **Heads up:** a good portion of the code in these repos is AI generated. I do understand how it works,
-> and I'm happy to explain any of it. If something looks wrong or you have a question, open an issue
-> or ping me on Discord (`watchthelight`).
-
 I'm getting a Lenovo Legion 5 15IAX10 to run macOS every day through OpenCore. Its Arrow Lake CPU, RTX 5070 Laptop GPU, Intel Xe iGPU and MediaTek MT7925 Wi-Fi 7 card have no macOS drivers, so these repos are the drivers and tools I wrote for them. The boot logs behind each one are public too.
 
 Each repo has its own pages on **[labs.watchthelight.org](https://labs.watchthelight.org)**, with its docs, releases and issues. Boot logs from the Legion and from people who run these drivers are in [research](https://labs.watchthelight.org/research/), and the AI setup behind the code is in [agents](https://labs.watchthelight.org/agents/).
