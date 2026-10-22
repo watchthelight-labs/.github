@@ -1,6 +1,6 @@
 <a href="https://labs.watchthelight.org"><img src="https://labs.watchthelight.org/og.png" alt="watchthelight labs" width="100%"></a>
 
-[![site](https://img.shields.io/badge/labs.watchthelight.org-6a9a6e?style=flat-square&labelColor=0d0e12&logo=githubpages&logoColor=c8ccd0)](https://labs.watchthelight.org) [![repos](https://img.shields.io/badge/repos-21-2a2d33?style=flat-square&labelColor=0d0e12)](https://github.com/orgs/watchthelight-labs/repositories) [![macOS](https://img.shields.io/badge/macOS_Tahoe-26.7.1-2a2d33?style=flat-square&labelColor=0d0e12&logo=apple&logoColor=c8ccd0)](https://labs.watchthelight.org) [![discord](https://img.shields.io/badge/discord-watchthelight-2a2d33?style=flat-square&labelColor=0d0e12&logo=discord&logoColor=c8ccd0)](https://discord.com/users/697169405422862417)
+[![site](https://img.shields.io/badge/labs.watchthelight.org-6a9a6e?style=flat-square&labelColor=0d0e12&logo=githubpages&logoColor=c8ccd0)](https://labs.watchthelight.org) [![repos](https://img.shields.io/badge/repos-22-2a2d33?style=flat-square&labelColor=0d0e12)](https://github.com/orgs/watchthelight-labs/repositories) [![macOS](https://img.shields.io/badge/macOS_Tahoe-26.7.1-2a2d33?style=flat-square&labelColor=0d0e12&logo=apple&logoColor=c8ccd0)](https://labs.watchthelight.org) [![discord](https://img.shields.io/badge/discord-watchthelight-2a2d33?style=flat-square&labelColor=0d0e12&logo=discord&logoColor=c8ccd0)](https://discord.com/users/697169405422862417)
 
 I'm getting a Lenovo Legion 5 15IAX10 to run macOS every day through OpenCore. Its Arrow Lake CPU, RTX 5070 Laptop GPU, Intel Xe iGPU and MediaTek MT7925 Wi-Fi 7 card have no macOS drivers, so these repos are the drivers and tools I wrote for them. The boot logs behind each one are public too.
 
@@ -12,6 +12,7 @@ Each repo has its own pages on **[labs.watchthelight.org](https://labs.watchthel
 |---|---|---|
 | [**NvGfx**](https://labs.watchthelight.org/NvGfx/) | Fork of NullMoth's NVIDIA Metal driver for macOS, kept for one RTX 5070 Laptop (10DE:2D18) in a Legion 5 15IAX10 on Tahoe: 115 W TGP... | [![release](https://img.shields.io/github/v/release/watchthelight-labs/NvGfx?style=flat-square&labelColor=0d0e12&color=4d7a51&label=)](https://labs.watchthelight.org/NvGfx/releases/) |
 | [**XeGfx**](https://labs.watchthelight.org/XeGfx/) | Intel Xe graphics for macOS: Linux i915 through FreeBSD drm-kmod and LinuxKPI on XNU, staged and safe to test (work in progress... |  |
+| [**LegionHybrid**](https://labs.watchthelight.org/LegionHybrid/) | Hybrid graphics for macOS on the Lenovo Legion 5 15IAX10: NVIDIA Optimus-style dGPU power control, render offload and the panel mux... |  |
 
 ### Wi-Fi & Bluetooth
 
