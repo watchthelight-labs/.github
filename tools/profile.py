@@ -30,11 +30,11 @@ def get(url):
 def row(r):
     n = r["name"]
     rel = (f"[![release](https://img.shields.io/github/v/release/{ORG}/{n}?{B}&color=4d7a51&label=)]"
-           f"(https://github.com/{ORG}/{n}/releases)") if r.get("release") else ""
+           f"(https://labs.watchthelight.org/{n}/releases/)") if r.get("release") else ""
     desc = (r.get("description") or "").replace("|", "/")
     if len(desc) > 140:
         desc = desc[:137].rsplit(" ", 1)[0] + "..."
-    return f"| [**{n}**](https://github.com/{ORG}/{n}) | {desc} | {rel} |"
+    return f"| [**{n}**](https://labs.watchthelight.org/{n}/) | {desc} | {rel} |"
 
 
 def main():
@@ -47,7 +47,7 @@ def main():
         groups.append({"title": site.get("other_group", "More"), "repos": rest})
     out = [
         '<a href="https://labs.watchthelight.org"><img src="https://labs.watchthelight.org/og.png" '
-        'alt="watchthelight labs: macOS drivers and tools for hardware Apple never shipped drivers for" width="100%"></a>',
+        'alt="watchthelight labs" width="100%"></a>',
         "",
         f"[![site](https://img.shields.io/badge/labs.watchthelight.org-6a9a6e?{B}&logo=githubpages&logoColor=c8ccd0)]"
         "(https://labs.watchthelight.org) "
@@ -61,9 +61,10 @@ def main():
         "",
         site["intro"],
         "",
-        "Every repo, with live badges and a starfield: **[labs.watchthelight.org](https://labs.watchthelight.org)**. "
-        "Logs from every boot attempt and from people who use these: "
-        f"[research](https://github.com/{ORG}/research). How the AI side works: [agents](https://github.com/{ORG}/agents).",
+        "Each repo has its own pages on **[labs.watchthelight.org](https://labs.watchthelight.org)**, with its docs, "
+        "releases and issues. Boot logs from the Legion and from people who run these drivers are in "
+        "[research](https://labs.watchthelight.org/research/), and the AI setup behind the code is in "
+        "[agents](https://labs.watchthelight.org/agents/).",
     ]
     for g in groups:
         items = [by[n] for n in g["repos"] if n in by]
