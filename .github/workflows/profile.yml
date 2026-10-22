@@ -1,0 +1,25 @@
+# <wtl> project: watchthelight-labs | file: .github/workflows/profile.yml | author: watchthelight </wtl>
+# Every 6 hours (after the site rebuild): regenerate profile/README.md from labs.watchthelight.org's data and
+# commit it when it changed.
+name: profile
+on:
+  schedule:
+    - cron: "53 */6 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: profile
+jobs:
+  profile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/profile.py
+      - name: commit if changed
+        run: |
+          git diff --quiet && exit 0
+          git config user.name watchthelight
+          git config user.email admin@watchthelight.org
+          git commit -am "profile: refresh from the live repo list"
+          git push
