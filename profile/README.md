@@ -11,13 +11,13 @@ Each repo has its own pages on **[labs.watchthelight.org](https://labs.watchthel
 | | | |
 |---|---|---|
 | [**NvGfx**](https://labs.watchthelight.org/NvGfx/) | Fork of NullMoth's NVIDIA Metal driver for macOS, kept for one RTX 5070 Laptop (10DE:2D18) in a Legion 5 15IAX10 on Tahoe: 115 W TGP... | [![release](https://img.shields.io/github/v/release/watchthelight-labs/NvGfx?style=flat-square&labelColor=0d0e12&color=4d7a51&label=)](https://labs.watchthelight.org/NvGfx/releases/) |
-| [**XeGfx**](https://labs.watchthelight.org/XeGfx/) | Intel Xe graphics for macOS: Linux i915 through FreeBSD drm-kmod and LinuxKPI on XNU, staged and safe to test (work in progress,... |  |
+| [**XeGfx**](https://labs.watchthelight.org/XeGfx/) | Intel Xe graphics for macOS: Linux i915 through FreeBSD drm-kmod and LinuxKPI on XNU, staged and safe to test (work in progress... |  |
 
 ### Wi-Fi & Bluetooth
 
 | | | |
 |---|---|---|
-| [**mt7925-hackintosh-wifi**](https://labs.watchthelight.org/mt7925-hackintosh-wifi/) | MediaTek MT7925 (Filogic 360, Wi-Fi 7, AMD RZ717) Wi-Fi driver for macOS Hackintosh: OpenCore, Sequoia 15 and Tahoe 26, WPA2, 190 Mb/s.... | [![release](https://img.shields.io/github/v/release/watchthelight-labs/mt7925-hackintosh-wifi?style=flat-square&labelColor=0d0e12&color=4d7a51&label=)](https://labs.watchthelight.org/mt7925-hackintosh-wifi/releases/) |
+| [**mt7925-hackintosh-wifi**](https://labs.watchthelight.org/mt7925-hackintosh-wifi/) | MediaTek MT7925 (Filogic 360, Wi-Fi 7, AMD RZ717) Wi-Fi driver for macOS Hackintosh: OpenCore, Sequoia 15 and Tahoe 26, WPA2, 190 Mb/s... | [![release](https://img.shields.io/github/v/release/watchthelight-labs/mt7925-hackintosh-wifi?style=flat-square&labelColor=0d0e12&color=4d7a51&label=)](https://labs.watchthelight.org/mt7925-hackintosh-wifi/releases/) |
 | [**mt7925-hackintosh-wifi-native**](https://labs.watchthelight.org/mt7925-hackintosh-wifi-native/) | macOS's own Wi-Fi menu for the MediaTek MT7925 / AMD RZ717 on Hackintosh: IO80211 controller and Skywalk data path over... | [![release](https://img.shields.io/github/v/release/watchthelight-labs/mt7925-hackintosh-wifi-native?style=flat-square&labelColor=0d0e12&color=4d7a51&label=)](https://labs.watchthelight.org/mt7925-hackintosh-wifi-native/releases/) |
 | [**mt7925-hackintosh-bluetooth**](https://labs.watchthelight.org/mt7925-hackintosh-bluetooth/) | MediaTek MT7925 / AMD RZ717 Bluetooth on macOS Hackintosh: loads the card's firmware (USB 0489:E111 and 20 other MT7925 ids) so... | [![release](https://img.shields.io/github/v/release/watchthelight-labs/mt7925-hackintosh-bluetooth?style=flat-square&labelColor=0d0e12&color=4d7a51&label=)](https://labs.watchthelight.org/mt7925-hackintosh-bluetooth/releases/) |
 | [**LegionBtFix**](https://labs.watchthelight.org/LegionBtFix/) | Lilu plugin for macOS Tahoe 26.7.1 (25G241): two in-memory patches to bluetoothd for the MediaTek MT7925 Bluetooth controller (LE Create... | [![release](https://img.shields.io/github/v/release/watchthelight-labs/LegionBtFix?style=flat-square&labelColor=0d0e12&color=4d7a51&label=)](https://labs.watchthelight.org/LegionBtFix/releases/) |

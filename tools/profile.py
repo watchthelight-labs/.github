@@ -30,7 +30,7 @@ def row(r):
            f"(https://labs.watchthelight.org/{n}/releases/)") if r.get("release") else ""
     desc = (r.get("description") or "").replace("|", "/")
     if len(desc) > 140:
-        desc = desc[:137].rsplit(" ", 1)[0] + "..."
+        desc = desc[:137].rsplit(" ", 1)[0].rstrip(".,;:") + "..."
     return f"| [**{n}**](https://labs.watchthelight.org/{n}/) | {desc} | {rel} |"
 
 
