@@ -11,7 +11,7 @@ Each repo has its own pages on **[labs.watchthelight.org](https://labs.watchthel
 | | | |
 |---|---|---|
 | [**NvGfx**](https://labs.watchthelight.org/NvGfx/) | Fork of NullMoth's NVIDIA Metal driver for macOS, kept for one RTX 5070 Laptop (10DE:2D18) in a Legion 5 15IAX10 on Tahoe: 115 W TGP... | [![release](https://img.shields.io/github/v/release/watchthelight-labs/NvGfx?style=flat-square&labelColor=0d0e12&color=4d7a51&label=)](https://labs.watchthelight.org/NvGfx/releases/) |
-| [**XeGfx**](https://labs.watchthelight.org/XeGfx/) | Open source Intel Xe graphics driver for macOS and Hackintosh: the Linux i915 driver on XNU through FreeBSD drm-kmod and LinuxKPI, with... | [![release](https://img.shields.io/github/v/release/watchthelight-labs/XeGfx?style=flat-square&labelColor=0d0e12&color=4d7a51&label=)](https://labs.watchthelight.org/XeGfx/releases/) |
+| [**XeGfx**](https://labs.watchthelight.org/XeGfx/) | Intel Xe graphics acceleration for macOS and Hackintosh: Metal and Vulkan on Iris Xe, Intel Arc and Core Ultra (Meteor Lake, Arrow Lake)... | [![release](https://img.shields.io/github/v/release/watchthelight-labs/XeGfx?style=flat-square&labelColor=0d0e12&color=4d7a51&label=)](https://labs.watchthelight.org/XeGfx/releases/) |
 | [**LegionHybrid**](https://labs.watchthelight.org/LegionHybrid/) | Hybrid graphics for macOS on the Lenovo Legion 5 15IAX10: NVIDIA Optimus-style dGPU power control, render offload and the panel mux... |  |
 
 ### Wi-Fi & Bluetooth
