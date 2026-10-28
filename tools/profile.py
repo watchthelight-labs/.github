@@ -49,7 +49,7 @@ def main():
         f"[![site](https://img.shields.io/badge/labs.watchthelight.org-6a9a6e?{B}&logo=githubpages&logoColor=c8ccd0)]"
         "(https://labs.watchthelight.org) "
         f"[![repos](https://img.shields.io/badge/repos-{len(repos)}-2a2d33?{B})](https://github.com/orgs/{ORG}/repositories) "
-        f"[![macOS](https://img.shields.io/badge/macOS_Tahoe-26.7.1-2a2d33?{B}&logo=apple&logoColor=c8ccd0)]"
+        f"[![macOS](https://img.shields.io/badge/macOS_Tahoe-{site.get('macos', '26.7.2')}-2a2d33?{B}&logo=apple&logoColor=c8ccd0)]"
         "(https://labs.watchthelight.org) "
         f"[![discord](https://img.shields.io/badge/discord-watchthelight-2a2d33?{B}&logo=discord&logoColor=c8ccd0)]"
         "(https://discord.com/users/697169405422862417)",
