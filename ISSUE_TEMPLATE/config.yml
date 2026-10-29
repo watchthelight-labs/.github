@@ -1,5 +1,11 @@
 blank_issues_enabled: true
 contact_links:
+  - name: Questions and setup help
+    url: https://github.com/orgs/watchthelight-labs/discussions
+    about: Ask in Discussions for "how do I", "which kext do I need" or "is my card supported".
+  - name: NullMoth's NVIDIA driver
+    url: https://github.com/nullmoth/nvidia-macos-driver/issues
+    about: Problems that also happen with NullMoth's own release, not only with our NvGfx fork.
   - name: OpenCore Install Guide
     url: https://dortania.github.io/OpenCore-Install-Guide/
     about: General OpenCore and Hackintosh setup questions are best answered there.
