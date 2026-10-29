@@ -1,0 +1,58 @@
+name: Hardware report
+description: Tell us one of our drivers works, partly works, or doesn't on your machine.
+title: "Hardware report: <machine>, <device ID>"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Reports from hardware I don't own are how the tested lists in the READMEs grow. A short one is fine. If something broke and you want it fixed, the bug report form asks for more.
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options:
+        - Works
+        - Partly works
+        - Doesn't work
+    validations:
+      required: true
+  - type: input
+    id: machine
+    attributes:
+      label: Machine
+      description: Laptop model, or the board for a desktop
+      placeholder: Dell Latitude 5421
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and its PCI or USB ID
+      placeholder: MT7925 Bluetooth, USB 0E8D:7925
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: macOS build, OpenCore version, kext and version
+      placeholder: 15.8.1 (24H32), OpenCore 1.0.8, MtkBt 0.2.4
+    validations:
+      required: true
+  - type: textarea
+    id: tested
+    attributes:
+      label: What you tried
+      description: For example which network type you joined, which devices you paired, whether it survived sleep and a restart.
+  - type: textarea
+    id: output
+    attributes:
+      label: Driver status
+      description: The ioreg or status command from the repo's README, for example `ioreg -rc MtkBt -l | grep MtkBt`
+      render: text
+  - type: checkboxes
+    id: redacted
+    attributes:
+      label: Privacy
+      options:
+        - label: I removed serial numbers, MAC addresses and network names from what I pasted.
+          required: true
