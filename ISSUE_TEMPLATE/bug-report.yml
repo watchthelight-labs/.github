@@ -1,0 +1,72 @@
+name: Bug report
+description: Something in one of our drivers or tools doesn't work, or the machine panics.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One problem per issue. If the repo's README has its own report script or commands, use those; the ones below are the general version.
+  - type: input
+    id: machine
+    attributes:
+      label: Machine
+      description: Laptop model, or the board for a desktop
+      placeholder: Lenovo Legion 5 15IAX10 (83F0) / ASUS TUF Gaming B850-Plus WiFi
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: CPU, and the GPU or card this is about, with its PCI or USB ID
+      description: "PCI: System Information > PCI, or Device Manager > Hardware Ids in Windows. USB: ioreg -p IOUSB -l -w0 | grep -E 'idVendor|idProduct'"
+      placeholder: Core Ultra 9 275HX, MT7925 14C3:7925
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: macOS build and OpenCore version
+      description: The build is in sw_vers. OpenCore's version is in the picker or opencore-version in NVRAM.
+      placeholder: 26.7.2 (25G332), OpenCore 1.0.8
+    validations:
+      required: true
+  - type: input
+    id: kext
+    attributes:
+      label: Kext and version, plus Lilu and other kexts it needs
+      placeholder: MtkBt 0.2.4, BlueToolFixup 2.7.2
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you saw, and whether it happens every boot or only after a restart, wake or Windows.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        Run these in Terminal and paste the output. Replace <Name> with the kext name (MtkBt, MtkWlan, XeGfx ...).
+        ```
+        sw_vers
+        kmutil showloaded --list-only | grep -iE "watchthelight|lilu|<Name>"
+        ioreg -r -c <Name> -l -w0
+        log show --last 10m --predicate 'eventMessage CONTAINS[c] "<Name>"' | tail -n 200
+        ```
+        Wi-Fi: attach the archive from `bash tools/mtk-report.sh` in mt7925-hackintosh-wifi instead.
+        After a panic: attach the newest panic*.ips from /Library/Logs/DiagnosticReports (or Console > Crash Reports).
+      render: text
+  - type: checkboxes
+    id: redacted
+    attributes:
+      label: Privacy
+      options:
+        - label: I removed serial numbers, MAC addresses and network names from what I pasted.
+          required: true
